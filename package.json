@@ -1,0 +1,13 @@
+{
+  "name": "template_tanstack",
+  "version": "0.0.0",
+  "description": "Kar's Tanstack Starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Karthik Appiah",
+  "license": "",
+  "packageManager": "pnpm@10.13.1"
+}
