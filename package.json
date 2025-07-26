@@ -6,10 +6,24 @@
   "keywords": [],
   "version": "0.0.0",
   "main": "index.js",
-  "packageManager": "pnpm@10.13.1",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "10.13.1",
+      "onFail": "error"
+    }
+  },
+  "engines": {
+    "node": ">=18.18.0",
+    "pnpm": ">=10.0.0"
   },
   "type": "module",
   "dependencies": {
