@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/')({
-  component: RootLayout,
+export const Route = createFileRoute('/app/')({
+  component: RouteComponent,
 })
 
-function RootLayout() {
+function RouteComponent() {
   return (
     <div className='flex flex-col flex-1'>
       <header className='flex items-center justify-between p-4'>
@@ -15,7 +15,7 @@ function RootLayout() {
         </nav>
       </header>
       <main className='flex justify-center grow items-center'>
-        <h1>Landing Page</h1>
+        <h1>App Page</h1>
       </main>
     </div>
   )

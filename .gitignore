@@ -1,1 +1,4 @@
+# all paths listed in this file are ignored by git version control!
+
 node_modules
+.tanstack

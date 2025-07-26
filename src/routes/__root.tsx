@@ -6,6 +6,7 @@ import {
   HeadContent,
   Scripts,
 } from '@tanstack/react-router'
+import stylesheet from '../styles/style.css?url'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -20,6 +21,9 @@ export const Route = createRootRoute({
       {
         title: "Kar's Tanstack Starter",
       },
+    ],
+    links: [
+      { rel: 'stylesheet', href: stylesheet }
     ],
   }),
   component: RootComponent,
@@ -39,10 +43,15 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className='flex flex-col min-h-screen'>
         {children}
         <Scripts />
       </body>
     </html>
   )
 }
+
+// <body className='flex flex-col min-h-screen'>:
+// making the body a flexbox container makes the children grow.
+// flex-col stacks children vertically to revert to non-flexbox default.
+// min-h-screen makes the body at least the height of the viewport to define parent height.
