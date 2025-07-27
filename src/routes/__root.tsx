@@ -1,40 +1,42 @@
 /// <reference types="vite/client" />
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
+
 import {
-  Outlet,
   createRootRoute,
   HeadContent,
+  Outlet,
   Scripts,
-} from '@tanstack/react-router'
-import stylesheet from '../styles/style.css?url'
+} from "@tanstack/react-router";
+
+import stylesheet from "../styles/style.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       {
-        charSet: 'utf-8',
+        charSet: "utf-8",
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
       },
       {
         title: "Kar's Tanstack Starter",
       },
     ],
     links: [
-      { rel: 'stylesheet', href: stylesheet }
+      { rel: "stylesheet", href: stylesheet },
     ],
   }),
   component: RootComponent,
-})
+});
 
 function RootComponent() {
   return (
     <RootDocument>
       <Outlet />
     </RootDocument>
-  )
+  );
 }
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
@@ -43,12 +45,12 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body className='flex flex-col min-h-screen'>
+      <body className="flex flex-col min-h-screen">
         {children}
         <Scripts />
       </body>
     </html>
-  )
+  );
 }
 
 // <body className='flex flex-col min-h-screen'>:
