@@ -15,7 +15,8 @@
     "dev": "vite dev",
     "build": "vite build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
   },
   "devEngines": {
     "runtime": {
@@ -46,6 +47,7 @@
     "eslint": "^9.32.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "husky": "^9.1.7",
     "typescript": "^5.8.3",
     "vite-tsconfig-paths": "^5.1.4"
   }
